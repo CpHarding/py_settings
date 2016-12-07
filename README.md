@@ -5,6 +5,8 @@ ever wanted to have a easy way to store and retrieve data to file?
 
 look no further. This saves data in a file in JSON format.
 
+Tested on 3.5.1, and 2.7.11
+
 Instantiation:
 ```python
 >from py_settings import Settings

@@ -21,12 +21,13 @@ class Settings(object):
             self.path = os.path.dirname(file_path)
         else:
             self.path = file_path
-        self.file_path = os.path.abspath(os.path.join(self.path, file_name))
+        self.file_path = os.path.abspath(os.path.join(self.path, filename))
         self._contents = {}
         
         if not os.path.exists(self.path):
             if create:
-                os.makedirs(self.path)
+                if self.path:
+                    os.makedirs(self.path)
         
         if not os.path.isfile(self.file_path):
             if create:

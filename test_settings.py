@@ -17,7 +17,7 @@ class TestCreation(unittest.TestCase):
         custom_name = 'custom_settings.ini'
         if os.path.exists(custom_name):
             os.remove(custom_name)
-        Settings(__file__, file_name=custom_name)
+        Settings(__file__, filename=custom_name)
         self.assertTrue(os.path.exists(custom_name))
         
     def test_custom_path(self):
@@ -38,7 +38,7 @@ class TestCreation(unittest.TestCase):
         output_file = os.path.join(custom_file_path, custom_name)
         if os.path.exists(output_file):
             os.remove(output_file)
-        Settings(custom_file_path, file_name=custom_name)
+        Settings(custom_file_path, filename=custom_name)
         self.assertTrue(os.path.exists(output_file))
     
     def test_create_false(self):
