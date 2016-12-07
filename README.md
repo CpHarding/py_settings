@@ -67,7 +67,7 @@ logger = logging.getLogger(__file__)
 settings = Settings(__file__)
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--log', default=setttings.get('log', default='INFO', add=True)
+parser.add_argument('--log', default=setttings.get('log', default='INFO', add=True))
 
 args = parser.parse_args()
 
