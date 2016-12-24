@@ -57,7 +57,7 @@ class Settings(object):
         :type value: Any
         :returns: None
         """
-        self._contents = self._read_file()
+        self.update()
         self._contents[key] = value
         self._write_file()
         
@@ -75,7 +75,7 @@ class Settings(object):
         :type update: Boolean
         """
         if update:
-            self._contents = self._read_file()
+            self.update()
         value = default
         try:
             value = self._contents[key]
